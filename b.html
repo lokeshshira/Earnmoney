@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UPI Display</title>
+</head>
+<body>
+  <h1>This is Website B</h1>
+  <p>UPI ID: <span id="upi"></span></p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const upi = params.get("upi") || "No UPI ID found";
+    document.getElementById("upi").innerText = upi;
+  </script>
+</body>
+</html>
